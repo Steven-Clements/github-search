@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 /* ~ ~ ~ ~ ~ { Import Screens & Components } ~ ~ ~ ~ ~ */
 import Home from './screens/Home';
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 /* ~ ~ ~ ~ ~ { Main (React) Process } ~ ~ ~ ~ ~ */
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home /> } />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

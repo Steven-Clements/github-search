@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-/* ~ ~ ~ ~ ~ { Main (React) Process } ~ ~ ~ ~ ~ */
-function Navbar({ variant, title, icon }) {
+/* ~ ~ ~ ~ ~ { Create the Component } ~ ~ ~ ~ ~ */
+const Navbar = ({ variant, title, icon }) => {
     /* - - - - - < Return JSX Markup /> - - - - - */
     return (
       <nav className={variant}>
@@ -22,5 +22,5 @@ Navbar.propTypes = {
   icon: PropTypes.string.isRequired
 }
   
-/* ~ ~ ~ ~ ~ { Export the Application } ~ ~ ~ ~ ~ */
+/* ~ ~ ~ ~ ~ { Export the Component } ~ ~ ~ ~ ~ */
 export default Navbar;
