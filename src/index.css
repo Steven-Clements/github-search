@@ -35,12 +35,6 @@ button {
   font-family: 'Lato', sans-serif;
 }
 
-/* ~ ~ ~ ~ ~ { Utilities } ~ ~ ~ ~ ~ */
-.bg-primary {
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
 /* ~ ~ ~ ~ ~ { Global Components } ~ ~ ~ ~ ~ */
 .navbar {
   display: sticky;
@@ -119,6 +113,35 @@ button {
 
 .card h3 {
   margin: 1rem 0;
+}
+
+/* ~ ~ ~ ~ ~ { About Screen } ~ ~ ~ ~ ~ */
+.about {
+  width: 60%;
+  margin: 2rem auto;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about ul {
+  margin: 1.5rem auto 0;
+  width: 60%;
+}
+
+.about li {
+  margin-bottom: 1rem;
+}
+
+/* ~ ~ ~ ~ ~ { Utilities } ~ ~ ~ ~ ~ */
+.bg-primary {
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 .rounded {

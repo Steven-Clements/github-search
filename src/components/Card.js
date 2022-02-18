@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 /* ~ ~ ~ ~ ~ { Create the Component } ~ ~ ~ ~ ~ */
 const Card = ({ user }) => {
     /* - - - - - < Destructue from the User Object /> - - - - - */
-    const { avatar_url, login, html_url } = user;
+    const { avatar_url, login } = user;
 
     /* - - - - - < Return JSX Markup /> - - - - - */
     return (
@@ -13,7 +13,7 @@ const Card = ({ user }) => {
         <img src={avatar_url} alt='Avatar' className='rounded' style={{ width: '60px' }} />
         <h3>{login}</h3>
         <div>
-            <Link to={html_url} className='btn btn-dark'>View Profile</Link>
+            <Link to={login} className='btn btn-dark'>View Profile</Link>
         </div>
     </div>
     )
