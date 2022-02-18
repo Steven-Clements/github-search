@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 /* ~ ~ ~ ~ ~ { Import Screens & Components } ~ ~ ~ ~ ~ */
 import Home from './screens/Home';
+import Profile from './screens/Profile';
 import About from './screens/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
       <Navbar title='GitHub Search' icon='fab fa-github' variant='navbar bg-primary' />
       <Routes>
         <Route path='/' element={ <Home /> } />
+        <Route path='/:login' element={ <Profile /> } />
         <Route path='/about' element={ <About /> } />
       </Routes>
       <Footer />

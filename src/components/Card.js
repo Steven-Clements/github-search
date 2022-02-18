@@ -13,7 +13,7 @@ const Card = ({ user }) => {
         <img src={avatar_url} alt='Avatar' className='rounded' style={{ width: '60px' }} />
         <h3>{login}</h3>
         <div>
-            <Link to={login} className='btn btn-dark'>View Profile</Link>
+            <Link to={`/${login}`} className='btn btn-dark'>View Profile</Link>
         </div>
     </div>
     )
