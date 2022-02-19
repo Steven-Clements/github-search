@@ -7,6 +7,17 @@ import Users from '../components/Users';
 import Search from '../components/Search';
 import Alert from '../components/Alert';
 
+let githubClientId;
+let githubClientSecret;
+
+if (process.env.NODE_ENV !== 'production') {
+  githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+} else {
+  githubClientId = process.env.GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+}
+
 /* ~ ~ ~ ~ ~ { Create the Component } ~ ~ ~ ~ ~ */
 function Home() {
   /* - - - - - < Initialize Component-Level State /> - - - - - */
@@ -19,7 +30,7 @@ function Home() {
   const search = async (text) => {
     try {
       setLoading(true);
-      const res = await axios.get(`https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+      const res = await axios.get(`https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`);
       const users = res.data.items;
       setUsers(users);
       setLoading(false);

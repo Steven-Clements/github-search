@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Profile from './screens/Profile';
 import About from './screens/About';
+import NotFound from './screens/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' element={ <Home /> } />
         <Route path='/:login' element={ <Profile /> } />
         <Route path='/about' element={ <About /> } />
+        <Route element={ <NotFound /> } />
       </Routes>
       <Footer />
     </BrowserRouter>
